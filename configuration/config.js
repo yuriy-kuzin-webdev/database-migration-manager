@@ -1,18 +1,16 @@
 const config = {
 
     input: {
-        driver: "",
-        connectionString: ""
+        driver: "mongodb",
+        connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
+        collections: "warehouse"
     },
 
     outputs: [
         {
-            driver: "",
-            connectionString: ""
-        },
-        {
-            driver: "",
-            connectionString: ""
+            driver: "mongodb",
+            connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
+            collections: "warehouseTest"
         },
     ],
 
