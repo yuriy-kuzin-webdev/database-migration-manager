@@ -1,5 +1,5 @@
 const log = (object) => {
-    console.log(object)
+    console.log(object.length)
     return object
 }
 
