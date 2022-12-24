@@ -1,9 +1,11 @@
 const config = {
+
     input: {
         driver: "",
         connectionString: ""
     },
-    output: [
+
+    outputs: [
         {
             driver: "",
             connectionString: ""
@@ -12,5 +14,10 @@ const config = {
             driver: "",
             connectionString: ""
         },
+    ],
+
+    middlewares: [
+        "logger",
+        "mapper"
     ]
 }
