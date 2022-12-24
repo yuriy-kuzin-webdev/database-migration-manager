@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yuriy-kuzin-webdev/database-migration-manager#readme",
   "dependencies": {
-    "mongodb": "^4.13.0"
+    "mongodb": "^4.13.0",
+    "pg": "^8.8.0"
   }
 }
