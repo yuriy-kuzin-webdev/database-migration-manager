@@ -13,16 +13,24 @@ const config = {
         {
             driver: "mongodb",
             connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
-            database: "warehouse",
+            database: "warehouseCopy",
             collections: [
-                "goodsCopy"
+                "goods"
+            ]
+        },
+        {
+            driver: "mongodb",
+            connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
+            database: "warehouseCopyCopy",
+            collections: [
+                "goods"
             ]
         },
     ],
 
     middlewares: [
-        "logger",
-        "mutator"
+        // "logger",
+        // "mutator"
     ]
 }
 
