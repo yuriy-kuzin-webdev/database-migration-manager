@@ -4,7 +4,9 @@ const config = {
         driver: "mongodb",
         connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
         database: "warehouse",
-        collections: "goods"
+        collections: [
+            "goods"
+        ]
     },
 
     outputs: [
@@ -12,12 +14,16 @@ const config = {
             driver: "mongodb",
             connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
             database: "warehouse",
-            collections: "goodsCopy"
+            collections: [
+                "goodsCopy"
+            ]
         },
     ],
 
     middlewares: [
         "logger",
-        "mapper"
+        "mutator"
     ]
 }
+
+module.exports = config
