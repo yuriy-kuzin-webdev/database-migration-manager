@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yuriy-kuzin-webdev/database-migration-manager/issues"
   },
-  "homepage": "https://github.com/yuriy-kuzin-webdev/database-migration-manager#readme"
+  "homepage": "https://github.com/yuriy-kuzin-webdev/database-migration-manager#readme",
+  "dependencies": {
+    "mongodb": "^4.13.0"
+  }
 }
