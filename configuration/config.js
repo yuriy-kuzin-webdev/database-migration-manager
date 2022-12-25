@@ -1,8 +1,8 @@
 const config = {
 
     input: {
-        driver: "mongodb",
-        connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
+        driver: "postgresql",
+        connectionString: "postgresql://dbuser:superpassword@localhost:5432",
         database: "warehouse",
         collections: [
             "goods"
@@ -15,17 +15,21 @@ const config = {
             connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
             database: "warehouseCopy",
             collections: [
-                "goods"
+                "goodsCopy"
             ]
         },
-        {
-            driver: "mongodb",
-            connectionString: "mongodb+srv://virok:virok@cluster0.2z17wno.mongodb.net/?retryWrites=true&w=majority",
-            database: "warehouseCopyCopy",
-            collections: [
-                "goods"
-            ]
-        },
+        // {
+        //     driver: "postgresql",
+        //     connectionString: "postgresql://dbuser:superpassword@localhost:5432",
+        //     database: "warehouse",
+        //     collections: [
+        //         "goods"
+        //     ],
+        //     options: {
+        //         isDatabaseExists: false,
+        //         isTablesExists: false
+        //     }
+        // },
     ],
 
     middlewares: [
