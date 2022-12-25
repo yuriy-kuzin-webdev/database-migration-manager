@@ -1,7 +1,27 @@
 const admin = require("firebase-admin");
 
 module.exports = (configuration) => ({
-  getData: async () => {},
+  getData: async () => {
+    admin.initializeApp({
+      credential: admin.credential.cert(configuration.connectionString),
+    });
+    const db = admin.firestore();
+    const collections = configuration.collections.map((collection, index) => ({
+      collectionName: collection,
+      collectionRef: db.collection(collection),
+    }));
+    const data = {
+      collectionNames: [],
+    };
+    const counter = 0
+    for (const {collectionName, collectionRef} of collections) {
+      const snapshot = await collectionRef.get()
+      data[collectionName] = snapshot.docs.map(doc => doc.data())
+      data.collectionNames.push(collectionName);
+    }
+
+    return data
+  },
   sendData: async (data) => {
     admin.initializeApp({
       credential: admin.credential.cert(configuration.connectionString),
