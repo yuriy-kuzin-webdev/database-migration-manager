@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yuriy-kuzin-webdev/database-migration-manager#readme",
   "dependencies": {
+    "firebase-admin": "^11.4.1",
     "mongodb": "^4.13.0",
     "pg": "^8.8.0",
     "pg-format": "^1.0.4"
